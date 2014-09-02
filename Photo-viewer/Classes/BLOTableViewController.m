@@ -58,26 +58,49 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 5;
+    return self.albums.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableViewCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    Album *album  = self.albums[indexPath.row];
+    cell.textLabel.text = album.name;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    cell.detailTextLabel.text = [formatter stringFromDate:album.date];
+
     return cell;
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Album"];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]];
+
+    id delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
+
+    NSError *error = nil;
+    NSArray *fetchedAlbums = [context executeFetchRequest:fetchRequest error:&error];
+
+    self.albums = [fetchedAlbums mutableCopy];
+
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if(buttonIndex == 1) {
+    if (buttonIndex == 1) {
         NSString *alertText = [alertView textFieldAtIndex:0].text;
-        [self albumWithName:alertText];
-        NSLog(@"My new album is %@", alertText);
+        Album *album = [self albumWithName:alertText];
+        [self.albums insertObject:album atIndex:0];
+        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForItem:0
+                                                                     inSection:0]]
+                              withRowAnimation:UITableViewRowAnimationFade];
     }
 }
 
