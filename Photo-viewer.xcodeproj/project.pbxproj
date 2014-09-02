@@ -13,15 +13,17 @@
 		9D3FC98B19B5F2CC004AD0A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3FC98A19B5F2CC004AD0A1 /* CoreData.framework */; };
 		9D3FC99119B5F2CC004AD0A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FC98F19B5F2CC004AD0A1 /* InfoPlist.strings */; };
 		9D3FC99319B5F2CC004AD0A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FC99219B5F2CC004AD0A1 /* main.m */; };
-		9D3FC99719B5F2CC004AD0A1 /* BLOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FC99619B5F2CC004AD0A1 /* BLOAppDelegate.m */; };
 		9D3FC99A19B5F2CC004AD0A1 /* Photo_viewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FC99819B5F2CC004AD0A1 /* Photo_viewer.xcdatamodeld */; };
-		9D3FC99C19B5F2CC004AD0A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FC99B19B5F2CC004AD0A1 /* Images.xcassets */; };
 		9D3FC9A319B5F2CC004AD0A1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3FC9A219B5F2CC004AD0A1 /* XCTest.framework */; };
 		9D3FC9A419B5F2CC004AD0A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3FC98419B5F2CC004AD0A1 /* Foundation.framework */; };
 		9D3FC9A519B5F2CC004AD0A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3FC98819B5F2CC004AD0A1 /* UIKit.framework */; };
 		9D3FC9A619B5F2CC004AD0A1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3FC98A19B5F2CC004AD0A1 /* CoreData.framework */; };
 		9D3FC9AE19B5F2CC004AD0A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FC9AC19B5F2CC004AD0A1 /* InfoPlist.strings */; };
 		9D3FC9B019B5F2CC004AD0A1 /* Photo_viewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FC9AF19B5F2CC004AD0A1 /* Photo_viewerTests.m */; };
+		FEBDC78EB55B522729B8E9D1 /* BLOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBDC6E4B05FA7918DDF85AB /* BLOAppDelegate.m */; };
+		FEBDCB4BD5925251DA94498C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBDC3B80A38A1CE6CAF366D /* Images.xcassets */; };
+		FEBDCF60A2DF3E4A8ED67834 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBDCE1F27645D4C970B683D /* Storyboard.storyboard */; };
+		FEBDCF8F09F7C5CA666D2A6E /* BLOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBDCA90FBFB972745EB2D57 /* BLOTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +46,18 @@
 		9D3FC99019B5F2CC004AD0A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9D3FC99219B5F2CC004AD0A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9D3FC99419B5F2CC004AD0A1 /* Photo-viewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Photo-viewer-Prefix.pch"; sourceTree = "<group>"; };
-		9D3FC99519B5F2CC004AD0A1 /* BLOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLOAppDelegate.h; sourceTree = "<group>"; };
-		9D3FC99619B5F2CC004AD0A1 /* BLOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLOAppDelegate.m; sourceTree = "<group>"; };
 		9D3FC99919B5F2CC004AD0A1 /* Photo_viewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_viewer.xcdatamodel; sourceTree = "<group>"; };
-		9D3FC99B19B5F2CC004AD0A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9D3FC9A119B5F2CC004AD0A1 /* Photo-viewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo-viewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FC9A219B5F2CC004AD0A1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9D3FC9AB19B5F2CC004AD0A1 /* Photo-viewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Photo-viewerTests-Info.plist"; sourceTree = "<group>"; };
 		9D3FC9AD19B5F2CC004AD0A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9D3FC9AF19B5F2CC004AD0A1 /* Photo_viewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo_viewerTests.m; sourceTree = "<group>"; };
+		FEBDC0465F4C8F69E50D484F /* BLOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLOTableViewController.h; path = Classes/BLOTableViewController.h; sourceTree = "<group>"; };
+		FEBDC3B80A38A1CE6CAF366D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FEBDC6A8471EBACF18F56A1F /* BLOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLOAppDelegate.h; sourceTree = "<group>"; };
+		FEBDC6E4B05FA7918DDF85AB /* BLOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLOAppDelegate.m; sourceTree = "<group>"; };
+		FEBDCA90FBFB972745EB2D57 /* BLOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLOTableViewController.m; path = Classes/BLOTableViewController.m; sourceTree = "<group>"; };
+		FEBDCE1F27645D4C970B683D /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +120,10 @@
 		9D3FC98C19B5F2CC004AD0A1 /* Photo-viewer */ = {
 			isa = PBXGroup;
 			children = (
-				9D3FC99519B5F2CC004AD0A1 /* BLOAppDelegate.h */,
-				9D3FC99619B5F2CC004AD0A1 /* BLOAppDelegate.m */,
-				9D3FC99B19B5F2CC004AD0A1 /* Images.xcassets */,
 				9D3FC99819B5F2CC004AD0A1 /* Photo_viewer.xcdatamodeld */,
 				9D3FC98D19B5F2CC004AD0A1 /* Supporting Files */,
+				FEBDC418631AEE9D0EDC72DD /* Classes */,
+				FEBDCC040B9CE0439D14CC1E /* Resources */,
 			);
 			path = "Photo-viewer";
 			sourceTree = "<group>";
@@ -151,6 +155,27 @@
 				9D3FC9AC19B5F2CC004AD0A1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FEBDC418631AEE9D0EDC72DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FEBDC0465F4C8F69E50D484F /* BLOTableViewController.h */,
+				FEBDCA90FBFB972745EB2D57 /* BLOTableViewController.m */,
+				FEBDC6A8471EBACF18F56A1F /* BLOAppDelegate.h */,
+				FEBDC6E4B05FA7918DDF85AB /* BLOAppDelegate.m */,
+			);
+			name = Classes;
+			path = "../../Photo-viewer";
+			sourceTree = "<group>";
+		};
+		FEBDCC040B9CE0439D14CC1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEBDCE1F27645D4C970B683D /* Storyboard.storyboard */,
+				FEBDC3B80A38A1CE6CAF366D /* Images.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3FC99119B5F2CC004AD0A1 /* InfoPlist.strings in Resources */,
-				9D3FC99C19B5F2CC004AD0A1 /* Images.xcassets in Resources */,
+				FEBDCF60A2DF3E4A8ED67834 /* Storyboard.storyboard in Resources */,
+				FEBDCB4BD5925251DA94498C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3FC99A19B5F2CC004AD0A1 /* Photo_viewer.xcdatamodeld in Sources */,
-				9D3FC99719B5F2CC004AD0A1 /* BLOAppDelegate.m in Sources */,
 				9D3FC99319B5F2CC004AD0A1 /* main.m in Sources */,
+				FEBDCF8F09F7C5CA666D2A6E /* BLOTableViewController.m in Sources */,
+				FEBDC78EB55B522729B8E9D1 /* BLOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
