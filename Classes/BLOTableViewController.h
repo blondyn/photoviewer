@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BLOTableViewController : UITableViewController
-
+@property (nonatomic, strong) NSMutableArray *albums;
+- (IBAction)addAlbumBarButtonItemPressed:(id)sender;
 @end

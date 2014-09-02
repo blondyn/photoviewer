@@ -7,8 +7,9 @@
 //
 
 #import "BLOTableViewController.h"
+#import "Album.h"
 
-@interface BLOTableViewController ()
+@interface BLOTableViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -22,6 +23,12 @@
     }
     return self;
 }
+
+- (NSMutableArray *)albums {
+    if(!_albums) _albums = [[NSMutableArray alloc] init];
+    return _albums;
+}
+
 
 - (void)viewDidLoad
 {
@@ -44,28 +51,69 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 5;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableViewCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == 1) {
+        NSString *alertText = [alertView textFieldAtIndex:0].text;
+        [self albumWithName:alertText];
+        NSLog(@"My new album is %@", alertText);
+    }
+}
+
+- (void)alertViewCancel:(UIAlertView *)alertView {
+    NSLog(@"cancel");
+}
+
+#pragma mark - Helper methods
+- (Album *)albumWithName:(NSString *)name {
+    NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] managedObjectContext];
+
+    Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album"
+                                                 inManagedObjectContext:context];
+    album.name = name;
+    album.date = [NSDate date];
+
+    NSError *err = nil;
+
+    if(![context save:&err]) {
+        //snap! got an error
+    }
+    return album;
+}
+
+#pragma mark - IBAction
+
+- (IBAction)addAlbumBarButtonItemPressed:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Please choose album"
+                                                        message:@"enter album name"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Add", nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertView show];
+}
+
 
 /*
 // Override to support conditional editing of the table view.
