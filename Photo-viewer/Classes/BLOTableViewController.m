@@ -87,7 +87,8 @@
 
 #pragma mark - Helper methods
 - (Album *)albumWithName:(NSString *)name {
-    NSManagedObjectContext *context = [[[UIApplication sharedApplication] delegate] managedObjectContext];
+    id delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [delegate managedObjectContext];
 
     Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album"
                                                  inManagedObjectContext:context];
